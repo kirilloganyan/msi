@@ -2,28 +2,28 @@ export function Contact() {
   return (
     <section id="contact" className="py-[var(--section-padding-mobile)] lg:py-[var(--section-padding)]">
       <div className="mx-auto max-w-[var(--container-width)] px-[var(--container-padding)]">
-        <div className="grid gap-8 rounded-[var(--radius-lg)] border border-[var(--border-light)] bg-white p-6 shadow-[var(--shadow-md)] lg:grid-cols-2 lg:p-10">
+        <div className="grid gap-8 rounded-xl border border-[var(--border)] bg-white p-6 shadow-[var(--shadow-sm)] lg:grid-cols-2 lg:p-10">
           <div>
-            <h2 className="text-[var(--text-2xl)] leading-tight lg:text-[44px]">Обсудим ваш приоритетный кейс</h2>
-            <p className="mt-4 max-w-xl text-[var(--text-md)] text-[var(--color-muted)]">Заполните форму, и мы вернемся с предложением формата работы в течение одного рабочего дня.</p>
+            <h2>Обсудим ваш приоритетный кейс</h2>
+            <p className="mt-6 max-w-xl text-base text-[var(--text-secondary)]">Заполните форму, и мы вернемся с предложением формата работы в течение одного рабочего дня.</p>
             <form className="mt-8 grid gap-4">
-              <input type="text" placeholder="Ваше имя" className="rounded-[var(--radius-md)] border border-[var(--border-light)] px-4 py-3 text-[var(--text-base)] outline-none transition focus:border-[var(--border-medium)]" />
-              <input type="email" placeholder="Email" className="rounded-[var(--radius-md)] border border-[var(--border-light)] px-4 py-3 text-[var(--text-base)] outline-none transition focus:border-[var(--border-medium)]" />
-              <textarea placeholder="Кратко опишите задачу" rows={4} className="rounded-[var(--radius-md)] border border-[var(--border-light)] px-4 py-3 text-[var(--text-base)] outline-none transition focus:border-[var(--border-medium)]" />
-              <button type="submit" className="rounded-[var(--radius-md)] bg-[var(--color-primary)] px-6 py-3 text-[var(--text-sm)] font-semibold text-white transition-opacity hover:opacity-90">Отправить заявку</button>
+              <input type="text" placeholder="Имя" className="rounded-xl border border-[var(--border)] bg-white px-4 py-3 text-base outline-none focus:border-[var(--accent-blue)]" />
+              <input type="email" placeholder="Email" className="rounded-xl border border-[var(--border)] bg-white px-4 py-3 text-base outline-none focus:border-[var(--accent-blue)]" />
+              <textarea placeholder="Задача" rows={4} className="rounded-xl border border-[var(--border)] bg-white px-4 py-3 text-base outline-none focus:border-[var(--accent-blue)]" />
+              <button type="submit" className="rounded-xl border border-[var(--accent-blue)] bg-[var(--accent-blue)] px-6 py-3 text-sm font-semibold text-white">Отправить заявку</button>
             </form>
           </div>
-          <aside className="rounded-[var(--radius-lg)] border border-[var(--border-light)] bg-[var(--surface-alt)] p-6">
-            <p className="text-[var(--text-sm)] font-medium uppercase tracking-[0.08em] text-[var(--color-primary)]">Trust proof</p>
-            <p className="mt-4 text-[var(--text-md)] text-[var(--color-muted)]">С нами работают команды, которым нужны предсказуемые изменения без потери операционного темпа.</p>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-[var(--radius-md)] border border-[var(--border-light)] bg-white p-4">
-                <p className="metric-number text-[var(--text-xl)] font-bold">40+</p>
-                <p className="text-[var(--text-sm)] text-[var(--color-muted)]">клиентских программ</p>
+          <aside className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
+            <p className="text-sm font-semibold uppercase tracking-[0.08em] text-[var(--accent-blue)]">Trust proof</p>
+            <p className="mt-4 text-base text-[var(--text-secondary)]">40+ предприятий, 3.3 млрд ₽ экономического эффекта, руководители уровня CEO-1 в проектном контуре.</p>
+            <div className="mt-6 grid gap-4">
+              <div className="rounded-xl border border-[var(--border)] bg-white p-4 shadow-[var(--shadow-sm)] transition hover:shadow-[var(--shadow-md)]">
+                <p className="text-3xl font-bold text-[var(--text-primary)]">1 рабочий день</p>
+                <p className="mt-2 text-sm text-[var(--text-muted)]">срок первичного ответа</p>
               </div>
-              <div className="rounded-[var(--radius-md)] border border-[var(--border-light)] bg-white p-4">
-                <p className="metric-number text-[var(--text-xl)] font-bold">15 лет</p>
-                <p className="text-[var(--text-sm)] text-[var(--color-muted)]">средний опыт партнеров</p>
+              <div className="rounded-xl border border-[var(--border)] bg-white p-4 shadow-[var(--shadow-sm)] transition hover:shadow-[var(--shadow-md)]">
+                <p className="text-3xl font-bold text-[var(--text-primary)]">C-level формат</p>
+                <p className="mt-2 text-sm text-[var(--text-muted)]">структурированная рабочая сессия</p>
               </div>
             </div>
           </aside>
