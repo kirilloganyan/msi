@@ -1,25 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #FFFFFF;
-  --surface: #F7F8FA;
+  --bg: #ffffff;
+  --surface: #f6f7f9;
+  --text-primary: #0b1220;
+  --text-secondary: #6b7280;
+  --text-muted: #6b7280;
+  --accent-blue: #1f4b99;
+  --accent-gold: #c8a24a;
+  --border: rgba(15, 23, 42, 0.08);
 
-  --text-primary: #111827;
-  --text-secondary: #4B5563;
-  --text-muted: #9CA3AF;
-
-  --accent-blue: #1F4B99;
-  --accent-teal: #0F766E;
-  --accent-gold: #C8A24A;
-
-  --border: rgba(17, 24, 39, 0.08);
-
-  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 12px 28px rgba(11, 18, 32, 0.08);
 
   --container-width: 1240px;
   --container-padding: 24px;
-  --section-padding-mobile: 48px;
+  --section-padding-mobile: 64px;
   --section-padding: 96px;
 }
 
@@ -30,7 +25,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
+  margin: 0;
   background: var(--bg);
   color: var(--text-primary);
   font-family: var(--font-geist-sans), Inter, Arial, sans-serif;
@@ -40,19 +40,27 @@ body {
 
 h1,
 h2,
-h3,
-.metric-number {
+h3 {
+  margin: 0;
   color: var(--text-primary);
+  font-weight: 600;
 }
 
 h1 {
-  font-size: clamp(40px, 6vw, 64px);
-  line-height: 1.05;
-  letter-spacing: -0.025em;
+  font-size: clamp(44px, 8vw, 64px);
+  line-height: 1.03;
+  letter-spacing: -0.03em;
 }
 
 h2 {
-  font-size: clamp(30px, 4vw, 36px);
-  line-height: 1.15;
+  font-size: clamp(32px, 5vw, 40px);
+  line-height: 1.12;
   letter-spacing: -0.02em;
+}
+
+.metric-number {
+  font-size: clamp(48px, 7vw, 64px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-weight: 600;
 }
