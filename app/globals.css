@@ -1,71 +1,40 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f6f7f9;
-  --foreground: #111827;
+  --bg: #FFFFFF;
+  --surface: #F7F8FA;
 
-  --text-xs: 12px;
-  --text-sm: 14px;
-  --text-base: 16px;
-  --text-md: 18px;
-  --text-lg: 22px;
-  --text-xl: 28px;
-  --text-2xl: 36px;
-  --text-3xl: 48px;
-  --text-4xl: 64px;
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --text-muted: #9CA3AF;
 
-  --font-regular: 400;
-  --font-medium: 500;
-  --font-semibold: 600;
-  --font-bold: 700;
+  --accent-blue: #1F4B99;
+  --accent-teal: #0F766E;
+  --accent-gold: #C8A24A;
 
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-6: 24px;
-  --space-8: 32px;
-  --space-12: 48px;
-  --space-16: 64px;
-  --space-24: 96px;
+  --border: rgba(17, 24, 39, 0.08);
 
-  --surface: #ffffff;
-  --surface-alt: #f6f7f9;
-
-  --border-light: rgba(0, 0, 0, 0.06);
-  --border-medium: rgba(0, 0, 0, 0.12);
-
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.08);
-
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.06);
 
   --container-width: 1240px;
   --container-padding: 24px;
-  --section-padding-mobile: 80px;
-  --section-padding: 104px;
-
-  --color-primary: #1f3b7a;
-  --color-text: #111827;
-  --color-muted: #6b7280;
+  --section-padding-mobile: 48px;
+  --section-padding: 96px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--bg);
+  --color-foreground: var(--text-primary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--color-text);
+  background: var(--bg);
+  color: var(--text-primary);
   font-family: var(--font-geist-sans), Inter, Arial, sans-serif;
-  font-size: var(--text-base);
-  font-weight: var(--font-regular);
+  font-size: 16px;
   line-height: 1.65;
 }
 
@@ -73,6 +42,17 @@ h1,
 h2,
 h3,
 .metric-number {
-  font-family: Georgia, "Times New Roman", serif;
-  color: #0b1220;
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: clamp(40px, 6vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  font-size: clamp(30px, 4vw, 36px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
 }

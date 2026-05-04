@@ -1,24 +1,24 @@
 const cases = [
   {
     company: "FinCore Group",
-    industry: "FinTech",
+    projects: "49 проектов",
     metric: "3.3 млрд ₽",
-    outcome: "Создали новую модель коммерческого управления и сократили срок окупаемости инициатив до 9 месяцев.",
-    roi: "ROI 4.8x",
+    outcome: "Новая модель коммерческого управления и срок окупаемости инициатив 9 месяцев.",
+    roi: "ROI 55x",
   },
   {
     company: "Retail Point",
-    industry: "Retail",
+    projects: "27 проектов",
     metric: "-35%",
-    outcome: "Пересобрали операционный контур поставок и устранили ключевые bottleneck в закупке и логистике.",
-    roi: "ROI 3.1x",
+    outcome: "Пересобран операционный контур поставок и устранены bottleneck закупки и логистики.",
+    roi: "ROI 18x",
   },
   {
     company: "B2B Cloud",
-    industry: "SaaS",
+    projects: "33 проекта",
     metric: "+140%",
-    outcome: "Запустили go-to-market трансформацию и масштабировали продажи на трех новых географиях.",
-    roi: "ROI 5.2x",
+    outcome: "Запущена go-to-market трансформация и масштабирование продаж в трех географиях.",
+    roi: "ROI 22x",
   },
 ];
 
@@ -26,16 +26,16 @@ export function Cases() {
   return (
     <section id="cases" className="py-[var(--section-padding-mobile)] lg:py-[var(--section-padding)]">
       <div className="mx-auto max-w-[var(--container-width)] px-[var(--container-padding)]">
-        <h2 className="text-[var(--text-2xl)] leading-tight lg:text-[44px]">Кейсы и результаты</h2>
-        <p className="mt-4 max-w-2xl text-[var(--text-md)] text-[var(--color-muted)]">Каждый проект строится вокруг измеримого эффекта на EBITDA, выручку или оборотный капитал.</p>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <h2>Кейсы и результаты</h2>
+        <p className="mt-6 max-w-2xl text-base text-[var(--text-secondary)]">Каждый проект строится вокруг измеримого эффекта на EBITDA, выручку или оборотный капитал.</p>
+        <div className="mt-8 grid gap-6 md:grid-cols-3">
           {cases.map((item) => (
-            <article key={item.company} className="rounded-[16px] border border-[var(--border-light)] bg-white p-6 shadow-[var(--shadow-sm)] transition duration-300 hover:-translate-y-1 hover:border-[var(--border-medium)] hover:shadow-[var(--shadow-md)]">
-              <p className="text-[var(--text-sm)] font-medium text-[var(--color-text)]">{item.company}</p>
-              <p className="mt-1 text-[var(--text-sm)] text-[var(--color-muted)]">{item.industry}</p>
-              <p className="metric-number mt-5 text-[var(--text-3xl)] font-bold leading-none">{item.metric}</p>
-              <p className="mt-4 text-[var(--text-base)] text-[var(--color-muted)]">{item.outcome}</p>
-              <span className="mt-5 inline-block rounded-full border border-[var(--border-light)] bg-[var(--surface-alt)] px-3 py-1 text-[var(--text-xs)] font-semibold uppercase tracking-[0.08em] text-[var(--color-primary)]">{item.roi}</span>
+            <article key={item.company} className="rounded-xl border border-[var(--border)] bg-white p-6 shadow-[var(--shadow-sm)] transition hover:shadow-[var(--shadow-md)]">
+              <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[var(--text-muted)]">{item.company}</p>
+              <p className="mt-4 text-5xl font-bold leading-none text-[var(--accent-gold)]">{item.metric}</p>
+              <p className="mt-3 text-sm font-semibold text-[var(--text-primary)]">{item.projects}</p>
+              <p className="mt-4 text-base text-[var(--text-secondary)]">{item.outcome}</p>
+              <p className="mt-4 text-sm font-semibold text-[var(--text-primary)]">{item.roi}</p>
             </article>
           ))}
         </div>

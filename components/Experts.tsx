@@ -2,14 +2,15 @@ const experts = ["Партнеры Big4 и strategy consulting", "CPO и про�
 
 export function Experts() {
   return (
-    <section id="experts" className="py-[var(--section-padding-mobile)] lg:py-[var(--section-padding)]">
+    <section id="experts" className="bg-[var(--surface)] py-[var(--section-padding-mobile)] lg:py-[var(--section-padding)]">
       <div className="mx-auto max-w-[var(--container-width)] px-[var(--container-padding)]">
-        <h2 className="text-[var(--text-2xl)] leading-tight lg:text-[44px]">Команда экспертов</h2>
-        <p className="mt-4 max-w-3xl text-[var(--text-md)] text-[var(--color-muted)]">Междисциплинарная команда с опытом сопровождения сложных трансформаций в корпоративной среде.</p>
-        <ul className="mt-10 grid gap-6 sm:grid-cols-2">
+        <h2>Команда экспертов</h2>
+        <p className="mt-6 max-w-3xl text-base text-[var(--text-secondary)]">Междисциплинарная команда с опытом сопровождения сложных трансформаций в корпоративной среде.</p>
+        <ul className="mt-8 grid gap-6 sm:grid-cols-2">
           {experts.map((item) => (
-            <li key={item} className="rounded-[var(--radius-lg)] border border-[var(--border-light)] bg-white p-6 text-[var(--text-base)] shadow-[var(--shadow-sm)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--border-medium)] hover:shadow-[var(--shadow-md)]">
-              {item}
+            <li key={item} className="rounded-xl border border-[var(--border)] bg-white p-6 shadow-[var(--shadow-sm)] transition hover:shadow-[var(--shadow-md)]">
+              <p className="text-lg font-bold text-[var(--text-primary)]">{item}</p>
+              <p className="mt-3 text-base text-[var(--text-muted)]">Опыт внедрения в крупном корпоративном контуре.</p>
             </li>
           ))}
         </ul>
