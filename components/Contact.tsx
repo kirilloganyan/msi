@@ -2,28 +2,32 @@ export function Contact() {
   return (
     <section id="contact" className="py-[var(--section-padding-mobile)] lg:py-[var(--section-padding)]">
       <div className="mx-auto max-w-[var(--container-width)] px-[var(--container-padding)]">
-        <div className="grid gap-8 rounded-xl border border-[var(--border)] bg-white p-6 shadow-[var(--shadow-sm)] lg:grid-cols-2 lg:p-10">
+        <div className="grid gap-8 border border-[var(--border)] bg-white p-8 lg:grid-cols-2 lg:p-12">
           <div>
-            <h2>Обсудим ваш приоритетный кейс</h2>
-            <p className="mt-6 max-w-xl text-base text-[var(--text-secondary)]">Заполните форму, и мы вернемся с предложением формата работы в течение одного рабочего дня.</p>
+            <p className="text-xs uppercase tracking-[0.08em] text-[var(--text-muted)]">Контакт</p>
+            <h2 className="mt-4">Обсудим приоритетную трансформацию</h2>
+            <p className="mt-6 max-w-xl text-base text-[var(--text-secondary)]">Оставьте короткий запрос — вернемся с форматом взаимодействия в течение одного рабочего дня.</p>
             <form className="mt-8 grid gap-4">
-              <input type="text" placeholder="Имя" className="rounded-xl border border-[var(--border)] bg-white px-4 py-3 text-base outline-none focus:border-[var(--accent-blue)]" />
-              <input type="email" placeholder="Email" className="rounded-xl border border-[var(--border)] bg-white px-4 py-3 text-base outline-none focus:border-[var(--accent-blue)]" />
-              <textarea placeholder="Задача" rows={4} className="rounded-xl border border-[var(--border)] bg-white px-4 py-3 text-base outline-none focus:border-[var(--accent-blue)]" />
-              <button type="submit" className="rounded-xl border border-[var(--accent-blue)] bg-[var(--accent-blue)] px-6 py-3 text-sm font-semibold text-white">Отправить заявку</button>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <input type="text" placeholder="Имя" className="border border-[var(--border)] bg-white px-4 py-3 text-base outline-none focus:border-[var(--accent-blue)]" />
+                <input type="email" placeholder="Email" className="border border-[var(--border)] bg-white px-4 py-3 text-base outline-none focus:border-[var(--accent-blue)]" />
+              </div>
+              <textarea placeholder="Бизнес-задача" rows={4} className="border border-[var(--border)] bg-white px-4 py-3 text-base outline-none focus:border-[var(--accent-blue)]" />
+              <button type="submit" className="w-full border border-[var(--text-primary)] bg-[var(--text-primary)] px-6 py-3 text-sm font-medium text-white hover:opacity-90 sm:w-auto">Отправить запрос</button>
             </form>
           </div>
-          <aside className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
-            <p className="text-sm font-semibold uppercase tracking-[0.08em] text-[var(--accent-blue)]">Trust proof</p>
-            <p className="mt-4 text-base text-[var(--text-secondary)]">40+ предприятий, 3.3 млрд ₽ экономического эффекта, руководители уровня CEO-1 в проектном контуре.</p>
-            <div className="mt-6 grid gap-4">
-              <div className="rounded-xl border border-[var(--border)] bg-white p-4 shadow-[var(--shadow-sm)] transition hover:shadow-[var(--shadow-md)]">
-                <p className="text-3xl font-bold text-[var(--text-primary)]">1 рабочий день</p>
-                <p className="mt-2 text-sm text-[var(--text-muted)]">срок первичного ответа</p>
+          <aside className="border border-[var(--border)] bg-[var(--surface)] p-8">
+            <p className="text-xs uppercase tracking-[0.08em] text-[var(--text-muted)]">Trust proof</p>
+            <p className="metric-number mt-4 text-[var(--accent-gold)]">3.3 млрд ₽</p>
+            <p className="mt-3 text-base font-medium text-[var(--text-primary)]">подтвержденного экономического эффекта</p>
+            <div className="mt-8 space-y-4">
+              <div className="border border-[var(--border)] bg-white p-6 transition hover:shadow-[var(--shadow-hover)]">
+                <p className="text-xs uppercase tracking-[0.08em] text-[var(--text-muted)]">Охват</p>
+                <p className="mt-2 text-3xl text-[var(--text-primary)]">40+ предприятий</p>
               </div>
-              <div className="rounded-xl border border-[var(--border)] bg-white p-4 shadow-[var(--shadow-sm)] transition hover:shadow-[var(--shadow-md)]">
-                <p className="text-3xl font-bold text-[var(--text-primary)]">C-level формат</p>
-                <p className="mt-2 text-sm text-[var(--text-muted)]">структурированная рабочая сессия</p>
+              <div className="border border-[var(--border)] bg-white p-6 transition hover:shadow-[var(--shadow-hover)]">
+                <p className="text-xs uppercase tracking-[0.08em] text-[var(--text-muted)]">Формат</p>
+                <p className="mt-2 text-3xl text-[var(--text-primary)]">C-level working sessions</p>
               </div>
             </div>
           </aside>
