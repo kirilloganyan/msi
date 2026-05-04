@@ -9,27 +9,26 @@ const navItems = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex max-w-[var(--container-width)] items-center justify-between px-[var(--container-padding)] py-4">
-        <a href="#" className="text-xl font-semibold text-[var(--color-text)] lg:text-2xl">
-          GrowthLab
+    <header className="sticky top-0 z-50 border-b border-[var(--border-light)] bg-white/95 backdrop-blur">
+      <div className="mx-auto flex max-w-[var(--container-width)] items-center justify-between px-[var(--container-padding)] py-5">
+        <a href="#" className="text-[var(--text-lg)] font-semibold tracking-tight text-[var(--color-text)] lg:text-[var(--text-xl)]">
+          MSI Consulting
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => (
-            <a key={item.href} href={item.href} className="text-sm transition-opacity hover:opacity-70 lg:text-base">
+            <a key={item.href} href={item.href} className="text-[var(--text-sm)] font-medium text-[var(--color-muted)] transition-opacity hover:opacity-70">
               {item.label}
             </a>
           ))}
         </nav>
 
-        <button
-          type="button"
-          className="rounded-[var(--radius)] border border-gray-200 px-3 py-2 text-sm md:hidden"
-          aria-label="Открыть меню"
+        <a
+          href="#contact"
+          className="hidden rounded-[var(--radius-md)] border border-[var(--border-light)] bg-white px-4 py-2 text-[var(--text-sm)] font-medium text-[var(--color-text)] shadow-[var(--shadow-sm)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--border-medium)] hover:shadow-[var(--shadow-md)] md:inline-flex"
         >
-          Меню
-        </button>
+          Консультация
+        </a>
       </div>
     </header>
   );
